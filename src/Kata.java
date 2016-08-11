@@ -75,6 +75,75 @@ public class Kata {
         return front + front + front;
     }
 
+    /* Given a string, take the last character and return a new string
+    //with the last character added at the front and back,
+    //so "cat" yields "tcatt". The original string will be length 1 or more. */
+
+    public String backAround(String str) {
+        String last = str.substring(str.length() -1);
+        return last + str + last;
+
+    }
+    /* Given a string, take the first 2 characters and return the string with the
+    //2 characters added at both the front and back, so "kitten" yields"kikittenki".
+    //If the string length is less than 2, use whatever characters are there. */
+
+    public String front22(String str) {
+        int take = 2;
+        if (take > str.length()) {
+            take = str.length();
+        }
+
+        String first = str.substring(0, take);
+        return first + str + first;
+
+    }
+
+    /* Given a string, if the string "del" appears starting at index 1,
+    //return a string where that "del" has been deleted. Otherwise,
+    //return the string unchanged. */
+
+    public String delDel(String str) {
+        if (str.length()>=4 && str.substring(1, 4).equals("del")) {
+
+            return str.substring(0, 1) + str.substring(4);
+        }
+
+        return str;
+    }
+
+    /*Given a string, return a string made of the first 2 characters (if present),
+    //however include first char only if it is 'o' and include the second
+    //only if it is 'z', so "ozymandias" yields "oz". */
+
+    public String startOz(String str) {
+        String result = "";
+
+        if (str.length() >= 1 && str.charAt(0) == 'o') {
+            result = result + str.charAt(0);
+        }
+
+        if (str.length() >= 2 && str.charAt(1) == 'z') {
+            result = result + str.charAt(1);
+        }
+
+        return result;
+    }
+
+     /*Given a string, return a new string where the last 3 characters are
+     //now in upper case. If the string has less than 3 characters,
+     //uppercase whatever is there. */
+
+     public String endUp(String str) {
+         if (str.length() <= 3) return str.toUpperCase();
+
+            int cut = str.length() - 3;
+            String front = str.substring(0, cut);
+            String back  = str.substring(cut);
+
+            return front + back.toUpperCase();
+        }
+
 
 }
 
