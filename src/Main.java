@@ -64,12 +64,12 @@ public class Main {
 
         //first22 examples
         System.out.println();
-        System.out.println("kata.backAround(Example)-> " + kata.front22("Kitten"));
-        System.out.println("kata.backAround(Example)-> " + kata.front22("Ha"));
-        System.out.println("kata.backAround(Example)-> " + kata.front22("abc"));
-        System.out.println("kata.backAround(Example)-> " + kata.front22("carbon"));
-        System.out.println("kata.backAround(Example)-> " + kata.front22("strong"));
-        System.out.println("kata.backAround(Example)-> " + kata.front22("future"));
+        System.out.println("kata.front22(Example)-> " + kata.front22("Kitten"));
+        System.out.println("kata.front22(Example)-> " + kata.front22("Ha"));
+        System.out.println("kata.front22(Example)-> " + kata.front22("abc"));
+        System.out.println("kata.front22(Example)-> " + kata.front22("carbon"));
+        System.out.println("kata.front22(Example)-> " + kata.front22("strong"));
+        System.out.println("kata.front22(Example)-> " + kata.front22("future"));
 
         //delDel examples
         System.out.println();
