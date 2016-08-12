@@ -12,10 +12,10 @@ public class Kata {
 
         StringBuilder result = new StringBuilder();
 
-        for(int i = 0 ; i < str.length(); i++)
-        {
+        for (int i = 0; i < str.length(); i++) {
+
             result = result.append(str.charAt(i));
-            if(i == str.length()-1)
+            if (i == str.length() - 1)
                 break;
             result = result.append(' ');
         }
@@ -30,9 +30,9 @@ public class Kata {
     public String notString(String str) {
         if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
             return str;
+        } else {
+            return "not" + str;
         }
-
-        return "not " + str;
     }
 
     /* Given a non-empty string and an integer, return a new string where the character
@@ -41,7 +41,7 @@ public class Kata {
 
     public String missingChar(String str, int n) {
         String front = str.substring(0, n);
-        String back = str.substring(n+1, str.length());
+        String back = str.substring(n + 1, str.length());
 
         return front + back;
     }
@@ -52,9 +52,9 @@ public class Kata {
     public String frontBack(String str) {
         if (str.length() <= 1) return str;
 
-        String mid = str.substring(1, str.length()-1);
+        String mid = str.substring(1, str.length() - 1);
 
-        return str.charAt(str.length()-1) + mid + str.charAt(0);
+        return str.charAt(str.length() - 1) + mid + str.charAt(0);
     }
 
     /*Given a string, we'll say that the front is the first 3 characters of
@@ -63,16 +63,11 @@ public class Kata {
     //3 copies of the front. */
 
     public String frontThree(String str) {
-        String front;
 
         if (str.length() >= 3) {
-            front = str.substring(0, 3);
-        }
-        else {
-            front = str;
-        }
-
-        return front + front + front;
+            String front = str.substring(0, 3);
+            return front + front + front;
+        } else return str;
     }
 
     /* Given a string, take the last character and return a new string
@@ -80,7 +75,7 @@ public class Kata {
     //so "cat" yields "tcatt". The original string will be length 1 or more. */
 
     public String backAround(String str) {
-        String last = str.substring(str.length() -1);
+        String last = str.substring(str.length() - 1);
         return last + str + last;
 
     }
@@ -104,7 +99,7 @@ public class Kata {
     //return the string unchanged. */
 
     public String delDel(String str) {
-        if (str.length()>=4 && str.substring(1, 4).equals("del")) {
+        if (str.length() >= 4 && str.substring(1, 4).equals("del")) {
 
             return str.substring(0, 1) + str.substring(4);
         }
@@ -134,16 +129,21 @@ public class Kata {
      //now in upper case. If the string has less than 3 characters,
      //uppercase whatever is there. */
 
-     public String endUp(String str) {
-         if (str.length() <= 3) return str.toUpperCase();
+    public String endUp(String str) {
+        if (str.length() <= 3) return str.toUpperCase();
 
-            int cut = str.length() - 3;
-            String front = str.substring(0, cut);
-            String back  = str.substring(cut);
+        int cut = str.length() - 3;
+        String front = str.substring(0, cut);
+        String back = str.substring(cut);
 
-            return front + back.toUpperCase();
-        }
+        return front + back.toUpperCase();
+    }
 
+    public String explode1(String str) {
+        String wide = str.replaceAll(".(?=.)", "$0 ");
 
+        return wide;
+
+    }
 }
 

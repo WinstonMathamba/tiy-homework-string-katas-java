@@ -97,7 +97,11 @@ public class Main {
         System.out.println("kata.endUp(Examples)-> " + kata.endUp("roar"));
         System.out.println("kata.endUp(Examples)-> " + kata.endUp("whoop"));
         System.out.println("kata.endUp(Examples)-> " + kata.endUp("raise"));
-        
+
+
+        //explode 2
+        System.out.println();
+        System.out.println(kata.explode1("Olympic"));
 
     }
 
