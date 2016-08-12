@@ -1,3 +1,5 @@
+import java.util.IntSummaryStatistics;
+
 /**
  * Created by win808mac on 8/10/16.
  */
@@ -112,15 +114,14 @@ public class Kata {
     public String startOz(String str) {
         String result = "";
 
-        if (str.length() >= 1 && str.charAt(0) == 'o') {
+        if (str.length() > 1 && str.charAt(0) == 'o') {
             result = result + str.charAt(0);
         }
-
-        if (str.length() >= 2 && str.charAt(1) == 'z') {
+        if (str.length() > 2 && str.charAt(1) == 'z') {
             result = result + str.charAt(1);
         }
-
         return result;
+
     }
 
      /*Given a string, return a new string where the last 3 characters are
@@ -128,13 +129,16 @@ public class Kata {
      //uppercase whatever is there. */
 
     public String endUp(String str) {
-        if (str.length() <= 3) return str.toUpperCase();
+        if (str.length() <= 3) {
+            return str.toUpperCase();
+        }
+        int last3 = str.length() - 3;
 
-        int cut = str.length() - 3;
-        String front = str.substring(0, cut);
-        String back = str.substring(cut);
+        String front = str.substring(0, last3);
+        String back = str.substring(last3);
 
         return front + back.toUpperCase();
+
     }
 
     public String explode1(String str) {
