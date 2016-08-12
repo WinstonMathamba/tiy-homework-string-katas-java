@@ -87,8 +87,7 @@ public class Kata {
         if (str.length() >= 2) {
             String first2 = str.substring(0, 2);
             return first2 + str + first2;
-        }
-        else {
+        } else {
             return str;
         }
 
@@ -100,11 +99,10 @@ public class Kata {
 
     public String delDel(String str) {
         if (str.length() >= 4 && str.substring(1, 4).equals("del")) {
-
             return str.substring(0, 1) + str.substring(4);
+        } else {
+            return str;
         }
-
-        return str;
     }
 
     /*Given a string, return a string made of the first 2 characters (if present),
