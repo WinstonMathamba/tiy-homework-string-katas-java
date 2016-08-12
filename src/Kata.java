@@ -84,13 +84,13 @@ public class Kata {
     //If the string length is less than 2, use whatever characters are there. */
 
     public String front22(String str) {
-        int take = 2;
-        if (take > str.length()) {
-            take = str.length();
+        if (str.length() >= 2) {
+            String first2 = str.substring(0, 2);
+            return first2 + str + first2;
         }
-
-        String first = str.substring(0, take);
-        return first + str + first;
+        else {
+            return str;
+        }
 
     }
 
