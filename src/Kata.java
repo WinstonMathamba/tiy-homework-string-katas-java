@@ -140,11 +140,12 @@ public class Kata {
         return front + back.toUpperCase();
 
     }
+/// BONUS Explode code that I want to learn more about!!
 
     public String explode1(String str) {
         String wide = str.replaceAll(".(?=.)", "$0 ");
 
-        return wide;
+        return "BONUS Example of Explode code I found and want to learn more about " + wide;
 
     }
 }
